@@ -1,0 +1,152 @@
+$white: rgb(240, 240, 240);
+$grey: rgb(200, 200, 200);
+$black: rgb(12, 12, 12);
+$darker-black: rgb(5, 5, 5);
+
+#navbar
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 5%;
+  padding-right: 5%;
+  height: 8vh;
+  background-color: $darker-black;
+
+  #title-div
+  {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  #title-div:hover
+  {
+    cursor: pointer;
+  }
+
+  #title-icon
+  {
+    width: auto;
+    height: 32px;
+  }
+
+  #title
+  {
+    font-size: 0.3em;
+    display: none;
+  }
+
+  #links
+  {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    font-size: 1em;
+    display: none;
+  }
+
+  .link
+  {
+    text-decoration: none;
+    color: $white;
+    transition: 0.2s ease-in-out;
+  }
+
+  #hamburg-icon
+  {
+    width: auto;
+    height: 24px;
+  }
+
+  #hamburg-icon:hover
+  {
+    cursor: pointer;
+  }
+
+  .link:hover
+  {
+    color: $grey;
+  }
+
+  @media all and (min-width: 400px)
+  {
+    #title-icon
+    {
+      width: auto;
+      height: 35px;
+    }
+
+    #title
+    {
+      display: none;
+      font-size: 1em;
+    }
+  }
+
+  @media all and (min-width: 800px)
+  {
+    #title-icon
+    {
+      width: auto;
+      height: 30px;
+    }
+
+    #hamburg-icon
+    {
+      display: none;
+    }
+
+    #links
+    {
+      display: flex;
+    }
+
+    #title
+    {
+      font-size: 1.3em;
+      display: block;
+    }
+
+    @media all and (min-width: 1200px)
+    {
+      #title-icon
+      {
+        width: auto;
+        height: 35px;
+      }
+
+      #title
+      {
+        display: block;
+        font-size: 1.6em;
+      }
+
+      #links
+      {
+        font-size: 1.2em;
+      }
+    }
+
+    @media all and (min-width: 1600px)
+    {
+      #title-icon
+      {
+        width: auto;
+        height: 35px;
+        font-size: 1.8em;
+      }
+
+      #links
+      {
+        font-size: 1.3em;
+      }
+
+      #title
+      {
+        display: block;
+        font-size: 2em;
+      }
+    }
+  }
+}
