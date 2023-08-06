@@ -3,15 +3,11 @@ import Hamburg from '../assets/photos/hamburg.png';
 import '../styling/navbar.scss';
 import React, { useRef } from 'react';
 
-function moveSlideMenuOut() {
-    console.log('clicked');
-}
-
 function navbar() {
     const slideMenuRef = useRef();
 
     const slideMenuOut = () => {
-        slideMenuRef.current.innerHTML = 'Bop';
+        slideMenuRef.current.toog;
     };
 
     return (
@@ -40,7 +36,13 @@ function navbar() {
                 />
             </div>
 
-            <div id='slide-menu' ref={slideMenuRef}></div>
+            <div id='slide-menu' ref={slideMenuRef}>
+                <div id='slide-menu-links'>
+                    <button></button>
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
         </>
     );
 }
