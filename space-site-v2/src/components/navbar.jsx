@@ -1,5 +1,6 @@
 import Icon from '../assets/photos/icon.png';
 import Hamburg from '../assets/photos/hamburg.png';
+import Close from '../assets/photos/close.png';
 import '../styling/navbar.scss';
 import React, { useRef } from 'react';
 
@@ -9,6 +10,11 @@ function navbar() {
     const slideMenuOut = () => {
         slideMenuRef.current.classList.toggle('active');
         document.body.style.overflow = 'hidden';
+    };
+
+    const slideMenuIn = () => {
+        slideMenuRef.current.classList.toggle('active');
+        document.body.style.overflow = 'auto';
     };
 
     return (
@@ -38,6 +44,9 @@ function navbar() {
             </div>
 
             <div id='slide-menu' ref={slideMenuRef}>
+                <button id='close-button'>
+                    <img src={Close} alt='Close button' onClick={slideMenuIn} />
+                </button>
                 <div id='slide-menu-links'>
                     <button className='slide-menu-link'>PAST</button>
                     <button className='slide-menu-link'>PRESENT</button>
