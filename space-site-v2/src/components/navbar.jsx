@@ -7,7 +7,8 @@ function navbar() {
     const slideMenuRef = useRef();
 
     const slideMenuOut = () => {
-        slideMenuRef.current.toog;
+        slideMenuRef.current.classList.toggle('active');
+        document.body.style.overflow = 'hidden';
     };
 
     return (
@@ -38,9 +39,9 @@ function navbar() {
 
             <div id='slide-menu' ref={slideMenuRef}>
                 <div id='slide-menu-links'>
-                    <button></button>
-                    <button></button>
-                    <button></button>
+                    <button className='slide-menu-link'>PAST</button>
+                    <button className='slide-menu-link'>PRESENT</button>
+                    <button className='slide-menu-link'>FUTURE</button>
                 </div>
             </div>
         </>

@@ -1,7 +1,8 @@
 $white: rgb(240, 240, 240);
 $grey: rgb(200, 200, 200);
 $black: rgb(12, 12, 12);
-$darker-black: rgb(5, 5, 5);
+$darker-black: rgb(10, 10, 10);
+$slide-menu-background: rgba(12, 12, 12, 0.6);
 
 #navbar
 {
@@ -53,6 +54,11 @@ $darker-black: rgb(5, 5, 5);
     transition: 0.2s ease-in-out;
   }
 
+  .link:hover
+  {
+    color: $grey;
+  }
+
   #hamburg-icon
   {
     width: auto;
@@ -62,11 +68,6 @@ $darker-black: rgb(5, 5, 5);
   #hamburg-icon:hover
   {
     cursor: pointer;
-  }
-
-  .link:hover
-  {
-    color: $grey;
   }
 
   @media all and (min-width: 400px)
@@ -148,5 +149,54 @@ $darker-black: rgb(5, 5, 5);
         font-size: 2em;
       }
     }
+  }
+}
+
+#slide-menu
+{
+  display: flex;
+  position: fixed;
+  background-color: $slide-menu-background;
+  backdrop-filter: blur(10px);
+  height: 100%;
+  width: 100%;
+  right: -100vw;
+  margin-right: auto;
+  pointer-events: none;
+  transition: 0.3s ease-in-out;
+
+  #slide-menu-links
+  {
+    display: flex;
+    flex-direction: column;
+    gap: 10em;
+    margin-top: 100px;
+    margin-left: 10px;
+
+    .slide-menu-link
+    {
+      background: none;
+      border: none;
+      border-bottom: 1px solid $grey;
+      display: flex;
+      font-size: 1.4em;
+      width: 80vw;
+    }
+  }
+}
+
+#slide-menu.active
+{
+  right: 0;
+  pointer-events: all;
+  overflow: hidden;
+}
+
+
+@media all and (min-width: 800px)
+{
+  #slide-menu
+  {
+    display: none;
   }
 }
