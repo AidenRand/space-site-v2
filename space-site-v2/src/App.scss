@@ -2,7 +2,6 @@ $white: rgb(240, 240, 240);
 $grey: rgb(200, 200, 200);
 $black: rgb(12, 12, 12);
 $darker-black: rgb(10, 10, 10);
-$slide-menu-background: rgba(12, 12, 12, 0.6);
 
 body
 {
@@ -48,43 +47,4 @@ body
   bottom: 0;
   left: 0;
   right: 0;
-}
-
-
-#home-intro-container
-{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  padding-top: 50px;
-  text-align: center;
-
-  h1
-  {
-    font-size: 3em;
-    margin: 0;
-  }
-
-  p
-  {
-    font-size: 1em;
-    font-weight: 200;
-  }
-}
-
-#home-sections
-{
-  display: flex;
-  flex-direction: column;
-
-  #home-past
-  {
-    display: flex;
-    margin-bottom: 100px;
-  }
-
-  #home-present
-  {
-
-  }
 }

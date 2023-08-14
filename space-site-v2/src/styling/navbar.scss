@@ -2,7 +2,6 @@ $white: rgb(240, 240, 240);
 $grey: rgb(200, 200, 200);
 $black: rgb(12, 12, 12);
 $darker-black: rgb(0, 0, 0);
-$slide-menu-background: rgba(12, 12, 12, 0.6);
 
 #navbar
 {
@@ -152,8 +151,7 @@ $slide-menu-background: rgba(12, 12, 12, 0.6);
   display: flex;
   flex-direction: column;
   position: fixed;
-  background-color: $slide-menu-background;
-  backdrop-filter: blur(10px);
+  background-color: $black;
   opacity: 0;
   height: 100%;
   width: 100%;
@@ -187,6 +185,7 @@ $slide-menu-background: rgba(12, 12, 12, 0.6);
       border-bottom: 1px solid $grey;
       display: flex;
       font-size: 1.4em;
+      color: $white;
       width: 80vw;
     }
   }
