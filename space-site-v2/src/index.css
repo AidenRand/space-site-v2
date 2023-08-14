@@ -4,5 +4,5 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-  background: -moz-linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.4)), url(./assets/photos/background.jpg);
+  background: -moz-linear-gradient(rgba(5, 5, 5, 1), rgba(5, 5, 5, 0.8)), url(./assets/photos/background.jpg);
 }

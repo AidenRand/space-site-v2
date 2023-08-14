@@ -17,10 +17,10 @@ $darker-black: rgb(10, 10, 10);
     margin: 0;
   }
 
-  p
+  h2
   {
     font-size: 1em;
-    font-weight: 200;
+    font-weight: 300;
   }
 }
 
@@ -28,11 +28,26 @@ $darker-black: rgb(10, 10, 10);
 {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 
-  .home-image
+  .home-section
   {
-    max-width: 300px;
+    text-align: center;
+    margin-bottom: 100px;
+
+    h2
+    {
+      font-size: 2.5em;
+    }
+
+    p
+    {
+      font-size: 1.8em;
+    }
   }
+}
+
+#goddard-div
+{
+  display: flex;
 }
