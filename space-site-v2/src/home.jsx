@@ -1,5 +1,11 @@
 import React, { useRef } from 'react';
-import './styling/home.scss'
+import './styling/home.scss';
+import Button from '@mui/material/Button';
+import { alpha, styled } from '@mui/material/styles';
+
+const ThemedButton = styled(Button)(({ theme }) => {
+    bgcolor: theme.palette.primary.main;
+});
 
 function home() {
     return (
@@ -9,7 +15,9 @@ function home() {
                     <h1>THE HISTORY OF SPACE TRAVEL</h1>
                     <h2>THE STORY BEGINS NOW</h2>
                 </div>
-            </div>      
+            </div>
+
+            <ThemedButton variant='contained'>hello</ThemedButton>
 
             <div id='home-sections' className='parallax_group'>
                 <div
@@ -35,14 +43,6 @@ function home() {
                     <h2>FUTURE</h2>
                     <p>Our future adventures</p>
                 </div>
-                
-                <div id='goddard-div'>
-                <p>ROBERT GODDARD</p>
-                <p>Dr. Robert H. Goddard was an American physicist, engineer, professor, and
-                creator of the first liquid propelled rocket. This rocket was launched on
-                March 16, 1926, the flight lasted 2.5 seconds and flew to a height of 41
-                feet at an everage speed of 60mph.</p>
-            </div>
             </div>
         </>
     );
