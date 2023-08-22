@@ -1,24 +1,25 @@
 import React, { useRef } from 'react';
 import './styling/home.scss';
-import Button from '@mui/material/Button';
-import { alpha, styled } from '@mui/material/styles';
 
-const ThemedButton = styled(Button)(({ theme }) => {
-    bgcolor: theme.palette.primary.main;
-});
+function home({ setActive, active }) {
+    if (active) {
+        homeRef.current.style.overflow = 'hidden';
+    }
 
-function home() {
+    if (!active) {
+        homeRef.current.style.overflow = 'auto';
+    }
+
+    const homeRef = useRef();
+
     return (
         <>
-            <div className='parallax-group' id='home-container'>
+            <div className='parallax-group' id='home-container' ref={homeRef}>
                 <div id='home-intro-container' className='parallax_layer--base'>
                     <h1>THE HISTORY OF SPACE TRAVEL</h1>
                     <h2>THE STORY BEGINS NOW</h2>
                 </div>
             </div>
-
-            <ThemedButton variant='contained'>hello</ThemedButton>
-
             <div id='home-sections' className='parallax_group'>
                 <div
                     id='home-past'

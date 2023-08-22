@@ -19,10 +19,10 @@ function App() {
     return (
         <>
             <ThemeProvider theme={theme}>
-                <Navbar active={active} setActive={setActive} />
-
                 <div className='parallax'>
-                    <Home active={active} />
+                    <Navbar active={active} setActive={setActive} />
+
+                    <Home active={active} setActive={setActive} />
                 </div>
             </ThemeProvider>
         </>

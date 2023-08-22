@@ -1,46 +1,74 @@
-import * as React from 'react';
-import PropTypes from 'prop-types';
-import AppBar from '@mui/material/AppBar';
-import CssBaseline from '@mui/material/CssBaseline';
-import Divider from '@mui/material/Divider';
-import Drawer from '@mui/material/Drawer';
-import IconButton from '@mui/material/IconButton';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
-import ListItemButton from '@mui/material/ListItemButton';
-import MenuIcon from '@mui/material/Menu';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import Box from '@mui/material/Box';
+import Icon from '../assets/photos/icon.png';
+import Hamburg from '../assets/photos/hamburg.png';
+import Close from '../assets/photos/close.png';
+import '../styling/navbar.scss';
+import React, { useRef } from 'react';
 
-const drawerWidth = 400;
-const navItems = ['Home', 'About', 'Contact'];
-function DrawNavBar(props) {
-    const { window } = props;
-    const [mobileOpen, setMobileOpen] = React.useState(false);
+function navbar({ setActive, active }) {
+    // const slideMenuRef = useRef();
 
-    const handleSlideMenuToggle = () => {
-        setMobileOpen((prevState) => !prevState);
+    const slideMenuOut = () => {
+        setActive(true);
+        // slideMenuRef.current.classList.toggle('active');
+        document.body.style.overflow = 'hidden';
     };
 
-    const slideMenu = (
-        <Box onClick={handleSlideMenuToggle} sx={{ textAlign: 'center' }}>
-            <Typography variant='h6' sx={{ my: 2 }}>
-                SPACE HISTORY
-            </Typography>
-            <Divider>
-                <List>
-                    {navItems.map((item) => (
-                        <ListItem key={item} disablePadding>
-                            <ListItemButton sx={{ textAlign: 'center' }}>
-                                <ListItemText primary={item} />
-                            </ListItemButton>
-                        </ListItem>
-                    ))}
-                </List>
-            </Divider>
-        </Box>
+    const slideMenuIn = () => {
+        setActive(false);
+        // slideMenuRef.current.classList.toggle('active');
+        document.body.style.overflow = 'auto';
+    };
+
+    return (
+        <>
+            <div className='parallax-group'>
+                <div
+                    id='navbar'
+                    className='parallax-layer parallax_layer--base'
+                >
+                    <div id='title-div'>
+                        <img src={Icon} id='title-icon' alt='title-icon' />
+                        <h1 id='title'>SPACE HISTORY</h1>
+                    </div>
+                    <div id='links'>
+                        <a href='#' className='link'>
+                            PAST
+                        </a>
+                        <a href='#' className='link'>
+                            PRESENT
+                        </a>
+                        <a href='#' className='link'>
+                            FUTURE
+                        </a>
+                    </div>
+                    <img
+                        src={Hamburg}
+                        alt='Hamburger icon'
+                        id='hamburg-icon'
+                        onClick={slideMenuOut}
+                    />
+                </div>
+                <div
+                    id='slide-menu'
+                    className={`parallax-layer parallax_layer--base ${
+                        active && 'active'
+                    }`}
+                >
+                    <button id='close-button'>
+                        <img
+                            src={Close}
+                            alt='Close button'
+                            onClick={slideMenuIn}
+                        />
+                    </button>
+                    <div id='slide-menu-links'>
+                        <button className='slide-menu-link'>PAST</button>
+                        <button className='slide-menu-link'>PRESENT</button>
+                        <button className='slide-menu-link'>FUTURE</button>
+                    </div>
+                </div>
+            </div>
+        </>
     );
 }
+export default navbar;
