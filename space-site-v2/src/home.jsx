@@ -1,15 +1,7 @@
 import React, { useRef } from 'react';
 import './styling/home.scss';
 
-function home({ setActive, active }) {
-    if (active) {
-        homeRef.current.style.overflow = 'hidden';
-    }
-
-    if (!active) {
-        homeRef.current.style.overflow = 'auto';
-    }
-
+function home() {
     const homeRef = useRef();
 
     return (

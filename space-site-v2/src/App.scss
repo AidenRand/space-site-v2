@@ -17,6 +17,11 @@ body
   perspective: 300px;
 }
 
+.parallax.active
+{
+  overflow: hidden;
+}
+
 .parallax_group
 {
   position: relative;
