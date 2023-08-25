@@ -2,11 +2,9 @@ import React, { useRef } from 'react';
 import './styling/home.scss';
 
 function home() {
-    const homeRef = useRef();
-
     return (
         <>
-            <div className='parallax-group' id='home-container' ref={homeRef}>
+            <div className='parallax-group' id='home-container'>
                 <div id='home-intro-container' className='parallax_layer--base'>
                     <h1>THE HISTORY OF SPACE TRAVEL</h1>
                     <h2>THE STORY BEGINS NOW</h2>

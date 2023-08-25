@@ -3,6 +3,7 @@ import Hamburg from '../assets/photos/hamburg.png';
 import Close from '../assets/photos/close.png';
 import '../styling/navbar.scss';
 import React, { useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 function navbar({ setActive, active }) {
     const slideMenuOut = () => {
@@ -18,6 +19,7 @@ function navbar({ setActive, active }) {
     return (
         <>
             <div className='parallax-group'>
+                {/* Navbar */}
                 <div
                     id='navbar'
                     className='parallax-layer parallax_layer--base'
@@ -26,17 +28,19 @@ function navbar({ setActive, active }) {
                         <img src={Icon} id='title-icon' alt='title-icon' />
                         <h1 id='title'>SPACE HISTORY</h1>
                     </div>
+
                     <div id='links'>
-                        <a href='#' className='link'>
+                        <Link to='/past' className='link'>
                             PAST
-                        </a>
-                        <a href='#' className='link'>
+                        </Link>
+                        <Link to='/present' className='link'>
                             PRESENT
-                        </a>
-                        <a href='#' className='link'>
+                        </Link>
+                        <Link to='/future' className='link'>
                             FUTURE
-                        </a>
+                        </Link>
                     </div>
+
                     <img
                         src={Hamburg}
                         alt='Hamburger icon'
@@ -44,6 +48,8 @@ function navbar({ setActive, active }) {
                         onClick={slideMenuOut}
                     />
                 </div>
+
+                {/* Slide menu */}
                 <div
                     id='slide-menu'
                     className={`parallax-layer parallax_layer--base ${
@@ -58,9 +64,15 @@ function navbar({ setActive, active }) {
                         />
                     </button>
                     <div id='slide-menu-links'>
-                        <button className='slide-menu-link'>PAST</button>
-                        <button className='slide-menu-link'>PRESENT</button>
-                        <button className='slide-menu-link'>FUTURE</button>
+                        <Link to='/past'>
+                            <button className='slide-menu-link'>PAST</button>
+                        </Link>
+                        <Link to='/present'>
+                            <button className='slide-menu-link'>PRESENT</button>
+                        </Link>
+                        <Link to='/future'>
+                            <button className='slide-menu-link'>FUTURE</button>
+                        </Link>
                     </div>
                 </div>
             </div>

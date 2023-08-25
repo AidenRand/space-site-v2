@@ -2,8 +2,7 @@ import { useRef, useState } from 'react';
 import './App.scss';
 import Navbar from './components/navbar';
 import Home from './home';
-import { Link } from 'react-router-dom';
-import Routes from './routes';
+import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
 
 function App() {
     const [count, setCount] = useState(0);
@@ -13,20 +12,18 @@ function App() {
     let parallaxClassName = 'parallax false';
 
     return (
-        <HashBrowser>
+        <BrowserRouter>
             <>
                 <div
                     className={`parallax ${active ? 'active' : 'false'}`}
                     ref={parallaxRef}
                 >
                     <Navbar active={active} setActive={setActive} />
+
                     <Home />
-                    <Link to='/Home'>
-                        <button>click me</button>
-                    </Link>
                 </div>
             </>
-        </HashBrowser>
+        </BrowserRouter>
     );
 }
 

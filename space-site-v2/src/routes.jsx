@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Home from './';
 import {
     Router,
     Switch,
@@ -12,11 +13,14 @@ import home from './home';
 class Routes extends Component {
     render() {
         return (
-            <HashRouter>
-                <Switch>
-                    <Route path='/' exact Component={home} />
-                </Switch>
-            </HashRouter>
+            <BrowserRouter>
+                <Routes>
+                    <Route exact path='/' element={<Home />}></Route>
+                    <Route path='/past'></Route>
+                    <Route path='/present'></Route>
+                    <Route path='/Future'></Route>
+                </Routes>
+            </BrowserRouter>
         );
     }
 }
