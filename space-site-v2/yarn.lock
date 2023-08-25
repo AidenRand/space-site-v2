@@ -950,6 +950,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@remix-run/router@npm:1.8.0":
+  version: 1.8.0
+  resolution: "@remix-run/router@npm:1.8.0"
+  checksum: 19412054e6d5e2e77e57735b2d937372f9ac164187180fe211c79bee04f1f5db91b859ef72f92055bffee3eb3eaa1aebe5033e366415cc386b4f345b08607eee
+  languageName: node
+  linkType: hard
+
 "@tootallnate/once@npm:2":
   version: 2.0.0
   resolution: "@tootallnate/once@npm:2.0.0"
@@ -3877,6 +3884,30 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-router-dom@npm:^6.15.0":
+  version: 6.15.0
+  resolution: "react-router-dom@npm:6.15.0"
+  dependencies:
+    "@remix-run/router": "npm:1.8.0"
+    react-router: "npm:6.15.0"
+  peerDependencies:
+    react: ">=16.8"
+    react-dom: ">=16.8"
+  checksum: 2555468ab38468c7449d617ed2f60f07a310078b71a1a8db907bc354064f6d34e03f5d9d273d3d8528c04dbb51c27bfa40eb2167cff9df4a19438003c4b04280
+  languageName: node
+  linkType: hard
+
+"react-router@npm:6.15.0":
+  version: 6.15.0
+  resolution: "react-router@npm:6.15.0"
+  dependencies:
+    "@remix-run/router": "npm:1.8.0"
+  peerDependencies:
+    react: ">=16.8"
+  checksum: 19be638294926e2d6b1ca6de753d3b69ac9cd3e295158f933a2c5d9befe2d6dd84f2b15d45d904ac5009f813901183b0a92d50f9d4c2f496c974192b0b8fb2ec
+  languageName: node
+  linkType: hard
+
 "react-transition-group@npm:^4.4.5":
   version: 4.4.5
   resolution: "react-transition-group@npm:4.4.5"
@@ -4328,6 +4359,7 @@ __metadata:
     eslint-plugin-react-refresh: "npm:^0.4.3"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
+    react-router-dom: "npm:^6.15.0"
     sass: "npm:^1.64.2"
     vite: "npm:^4.4.9"
     webpack: "npm:^5.88.2"

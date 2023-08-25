@@ -5,17 +5,13 @@ import '../styling/navbar.scss';
 import React, { useRef } from 'react';
 
 function navbar({ setActive, active }) {
-    // const slideMenuRef = useRef();
-
     const slideMenuOut = () => {
         setActive(true);
-        // slideMenuRef.current.classList.toggle('active');
         document.body.style.overflow = 'hidden';
     };
 
     const slideMenuIn = () => {
         setActive(false);
-        // slideMenuRef.current.classList.toggle('active');
         document.body.style.overflow = 'auto';
     };
 
