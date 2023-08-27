@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import Home from './';
+import Home from './home';
+import Past from './past';
+
 import {
     Router,
     Switch,
@@ -15,8 +17,10 @@ class Routes extends Component {
         return (
             <BrowserRouter>
                 <Routes>
-                    <Route exact path='/' element={<Home />}></Route>
-                    <Route path='/past'></Route>
+                    <Route exact path='/' element={Home}>
+                        ljkh
+                    </Route>
+                    <Route path='/past' element={Past}></Route>
                     <Route path='/present'></Route>
                     <Route path='/Future'></Route>
                 </Routes>
