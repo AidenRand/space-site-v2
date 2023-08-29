@@ -64,15 +64,9 @@ function navbar({ setActive, active }) {
                         />
                     </button>
                     <div id='slide-menu-links'>
-                        <Link to='/past'>
-                            <button className='slide-menu-link'>PAST</button>
-                        </Link>
-                        <Link to='/present'>
-                            <button className='slide-menu-link'>PRESENT</button>
-                        </Link>
-                        <Link to='/future'>
-                            <button className='slide-menu-link'>FUTURE</button>
-                        </Link>
+                        <Link to='/past'>PAST</Link>
+                        <Link to='/present'>PRESENT</Link>
+                        <Link to='/future'>FUTURE</Link>
                     </div>
                 </div>
             </div>

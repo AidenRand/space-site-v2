@@ -12,18 +12,16 @@ function App() {
     let parallaxClassName = 'parallax false';
 
     return (
-        <BrowserRouter>
-            <>
-                <div
-                    className={`parallax ${active ? 'active' : 'false'}`}
-                    ref={parallaxRef}
-                >
-                    <Navbar active={active} setActive={setActive} />
+        <>
+            <div
+                className={`parallax ${active ? 'active' : 'false'}`}
+                ref={parallaxRef}
+            >
+                <Navbar active={active} setActive={setActive} />
 
-                    <Home />
-                </div>
-            </>
-        </BrowserRouter>
+                <Home />
+            </div>
+        </>
     );
 }
 
