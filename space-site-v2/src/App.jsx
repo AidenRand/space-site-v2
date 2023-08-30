@@ -1,8 +1,9 @@
 import { useRef, useState } from 'react';
 import './App.scss';
 import Navbar from './components/navbar';
-import Home from './home';
+import * as Home from './home';
 import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
+import PageRouters from './routes';
 
 function App() {
     const [count, setCount] = useState(0);
@@ -12,16 +13,17 @@ function App() {
     let parallaxClassName = 'parallax false';
 
     return (
-        <>
-            <div
-                className={`parallax ${active ? 'active' : 'false'}`}
-                ref={parallaxRef}
-            >
-                <Navbar active={active} setActive={setActive} />
-
-                <Home />
-            </div>
-        </>
+        <BrowserRouter>
+            <>
+                <div
+                    className={`parallax ${active ? 'active' : 'false'}`}
+                    ref={parallaxRef}
+                >
+                    <Navbar active={active} setActive={setActive} />
+                    <PageRouters></PageRouters>
+                </div>
+            </>
+        </BrowserRouter>
     );
 }
 

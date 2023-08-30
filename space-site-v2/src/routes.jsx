@@ -4,23 +4,20 @@ import Past from './past';
 
 import {
     Router,
-    Switch,
+    Routes,
     Route,
     BrowserRouter,
     HashRouter,
 } from 'react-router-dom';
 
-class Routes extends Component {
-    render() {
-        return (
-            <BrowserRouter>
-                <Routes>
-                    <Route exact path='/' element={<Home />}></Route>
-                    <Route path='/past' element={<Past />}></Route>
-                    <Route path='/present'></Route>
-                    <Route path='/Future'></Route>
-                </Routes>
-            </BrowserRouter>
-        );
-    }
+function PageRouters() {
+    return (
+        <Routes>
+            <Route exact path='/' element={<Home />} />
+            <Route path='/past' element={<Past />} />
+            <Route path='/present' />
+            <Route path='/Future' />
+        </Routes>
+    );
 }
+export default PageRouters;
