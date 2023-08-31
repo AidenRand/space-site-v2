@@ -20,7 +20,9 @@ function App() {
                     ref={parallaxRef}
                 >
                     <Navbar active={active} setActive={setActive} />
-                    <PageRouters></PageRouters>
+                    <div id='site-body'>
+                        <PageRouters />
+                    </div>
                 </div>
             </>
         </BrowserRouter>

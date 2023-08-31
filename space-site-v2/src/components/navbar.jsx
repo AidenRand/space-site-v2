@@ -25,8 +25,10 @@ function navbar({ setActive, active }) {
                     className='parallax-layer parallax_layer--base'
                 >
                     <div id='title-div'>
-                        <img src={Icon} id='title-icon' alt='title-icon' />
-                        <h1 id='title'>SPACE HISTORY</h1>
+                        <Link id='title-link' to='/'>
+                            <img src={Icon} id='title-icon' alt='title-icon' />
+                            <h1 id='title'>SPACE HISTORY</h1>
+                        </Link>
                     </div>
 
                     <div id='links'>
@@ -64,9 +66,27 @@ function navbar({ setActive, active }) {
                         />
                     </button>
                     <div id='slide-menu-links'>
-                        <Link to='/past'>PAST</Link>
-                        <Link to='/present'>PRESENT</Link>
-                        <Link to='/future'>FUTURE</Link>
+                        <Link
+                            to='/past'
+                            className='slide-menu-link'
+                            onClick={slideMenuIn}
+                        >
+                            PAST
+                        </Link>
+                        <Link
+                            to='/present'
+                            className='slide-menu-link'
+                            onClick={slideMenuIn}
+                        >
+                            PRESENT
+                        </Link>
+                        <Link
+                            to='/future'
+                            className='slide-menu-link'
+                            onClick={slideMenuIn}
+                        >
+                            FUTURE
+                        </Link>
                     </div>
                 </div>
             </div>

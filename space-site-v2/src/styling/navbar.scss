@@ -15,9 +15,24 @@ $darker-black: rgb(5, 5, 5);
 
   #title-div
   {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    align-content: center;
+
+    #title-link
+    {
+      display: flex;
+      text-decoration: none;
+      align-items: center;
+      gap: 10px;
+
+
+      
+      #title
+      {
+        font-size: 2em;
+        color: $white;
+      }
+  
+    }
   }
 
   #title-div:hover
@@ -29,12 +44,6 @@ $darker-black: rgb(5, 5, 5);
   {
     width: auto;
     height: 32px;
-  }
-
-  #title
-  {
-    font-size: 0.3em;
-    display: none;
   }
 
   #links
@@ -75,7 +84,6 @@ $darker-black: rgb(5, 5, 5);
     #title
     {
       display: none;
-      font-size: 1em;
     }
   }
 
@@ -101,6 +109,7 @@ $darker-black: rgb(5, 5, 5);
     {
       font-size: 1.3em;
       display: block;
+      text-decoration: none;
     }
 
     @media all and (min-width: 1200px)
@@ -115,6 +124,7 @@ $darker-black: rgb(5, 5, 5);
       {
         display: block;
         font-size: 1.6em;
+        text-decoration: none;
       }
 
       #links
@@ -141,6 +151,7 @@ $darker-black: rgb(5, 5, 5);
       {
         display: block;
         font-size: 2em;
+        text-decoration: none;
       }
     }
   }
@@ -159,7 +170,7 @@ $darker-black: rgb(5, 5, 5);
   top: 0;
   margin-right: auto;
   pointer-events: none;
-  transition: 0.3s ease-in-out;
+  transition: 0.2s ease-in-out;
 
   #close-button
   {
@@ -187,6 +198,7 @@ $darker-black: rgb(5, 5, 5);
       font-size: 1.4em;
       color: $white;
       width: 80vw;
+      text-decoration: none;
     }
   }
 }
